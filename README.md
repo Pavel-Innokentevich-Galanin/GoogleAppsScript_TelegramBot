@@ -57,14 +57,16 @@
 ```bash
 sudo apt update
 sudo apt install tree
-tree --charset ascii
+tree --charset ascii -a -I ".git"
 ```
 
 ```
 .
-|-- LICENSE
-|-- README.md
-`-- src
+|-- LICENSE             # лицензия репозитория
+|-- .prettierignore     # на какие файлы не работает выравнивание кода
+|-- .prettierrc.json    # выравнивание кода расширением Prettier в VS Code
+|-- README.md           # инструкция репозитория
+`-- src                 # папка с кодом
     |-- env.html        # файл с секретами (аналог .env)
     `-- Код.gs          # стартовый файл Google Script (аналог main.js)
 
