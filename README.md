@@ -7,11 +7,14 @@
 Плюсы:
 - это бесплатно
 - не нужно иметь машину с утановленой NodeJS
+- можно выполнять скрипт удаленно
 
 Минусы:
 - нельзя использовать npm пакеты (нужно писать код самому)
 - не работает `new URLSearchParams(data)` - нужно реализовывать самому
 - чтобы запустить код, то нужно постучаться по ссылке
+- чтобы выполнить скрипт, нужно постучаться по ссылке:
+    - `https://script.google.com/macros/s/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/exec`
 
 ## Как запустить код
 
@@ -47,7 +50,7 @@
 1. Копирую ссылку URL:
     - `https://script.google.com/macros/s/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/exec`
 1. Запускаю ссылку
-    > Почему-то не работает ссылка
+1. Ура, работает!
 
 ## Структура проекта
 

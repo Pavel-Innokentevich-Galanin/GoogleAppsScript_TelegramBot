@@ -1,7 +1,13 @@
+// Эта функция-кастыль, чтобы работала кнопка "Выполнить"
+// Функция main вызовется и без функции myFunction
+function myFunction() {
+
+}
+
 var envJson = HtmlService.createHtmlOutputFromFile("env.html").getContent();
 const env = JSON.parse(envJson);
 
-function myFunction() {
+function main() {
   console.log("Это данные env взятые из файла env.html (аналог файла .env, env.js):");
   console.log(env);
 
@@ -10,8 +16,7 @@ function myFunction() {
   const text = `Эй ты. (${new Date()})`;
   sendMessage(token, chat_id, text);
 }
-
-// myFunction(); // Вызвать функцию main, но Google Apps Script сам вызовет
+main()
 
 function createQuery(data = {}) {
   const keys = Object.keys(data);
