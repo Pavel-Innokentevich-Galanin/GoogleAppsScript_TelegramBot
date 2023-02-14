@@ -80,3 +80,21 @@ tree --charset ascii -a -I ".git"
     https://script.google.com/home.
     Дата доступа:
     14.02.2023.
+1. Swagger UI
+    [Electronic resource] -
+    Mode of access:
+    https://telegram-bot-api.vercel.app.
+    Date of access:
+    14.02.2023.
+1. Telegram Bot API
+    [Electronic resource] -
+    Mode of access:
+    https://core.telegram.org/bots/api/#sendmessage.
+    Date of access:
+    14.02.2023.
+1. Download Postman | Get Started for Free
+    [Electronic resource] -
+    Mode of access:
+    https://www.postman.com/downloads.
+    Date of access:
+    14.02.2023.
