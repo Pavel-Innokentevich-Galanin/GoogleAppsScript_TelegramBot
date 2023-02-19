@@ -27,29 +27,36 @@
 
 Создаем проект:
 1. Заходим на [Google Apps Scripts](https://script.google.com/home).
-1. Жмем `Создать проект`.
+1. Жмем `New project` (Создать проект).
 1. Переименовываю проект:
-    - Жму `Проект без названия`.
-    - Пишу `Лекции АИС`.
-1. В файл `Код.gs` пишем код:
-    1. Вставляю в файл `Код.js` код [src/Код.gs](src/%D0%9A%D0%BE%D0%B4.gs).
-1. Создаем файл `env.html` (аналог файла .env):
+    - Жму `Untitled project` (Проект без названия).
+    - Пишу `8sem_AIS_telegramBot`.
+1. В файл `Code.gs` (Код.gs) пишем код:
+    1. Вставляю в файл `Code.gs` (Код.gs) код [src/Code.gs](src/Code.gs).
+1. Создаем файл секретов:
     1. Жму `+`.
     1. Жму `HTML`.
     1. Ввожу название `env`.
     1. Вставляю в файл `env.html` код [src/env.html](src/env.html).
     1. В env файле (`env.html`) нужно поменять следующие параметры:
         - `telegram_bot_token` - токен бота телеграм (можно создать через бота [BotFather](https://t.me/BotFather))
+        - `google_table_id` - ид [Google таблицы](https://docs.google.com/spreadsheets)
+            ```
+            https://docs.google.com/spreadsheets/d/<тут_ид_гугл_таблицы>/edit
+            ```
 
 Как получить ссылку на проект:
-1. Заходим на страницу с нашим кодом (файлом `Код.gs`)
-1. Жму `Начать развертывание`.
-1. Жму `Новое развертывание`.
-1. Жму на шестренку у текста `Выберите тип`.
-1. Жму `Веб-приложение`.
-    - Описание: `Лекции АИС`
-    - Веб-приложение: `От моего имени`
-    - У кого есть доступа: `Все`
+1. Заходим на страницу с файлом `Code.gs` (Код.gs)
+1. Жму `Deploy` (Начать развертывание).
+1. Жму `New deployment` (Новое развертывание).
+1. Жму на шестренку у текста `Select type` (Выберите тип).
+1. Жму `Web app` (Веб-приложение).
+    - `Description` (Описание)
+        - `New description` (Описание): `Telegram Bot`
+    - `Web App` (Веб-приложение):
+        - `Execute as` (Запуск от имени): `Me` (От моего имени)
+        - `Who has access` (У кого есть доступа): `Anyone` (Все)
+    - Жму `Deploy` (Начать развертывание)
 1. Копирую ссылку URL:
     - `https://script.google.com/macros/s/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/exec`
 
@@ -80,8 +87,8 @@ tree --charset ascii -a -I ".git"
 |-- .prettierrc.json    # выравнивание кода расширением Prettier в VS Code
 |-- README.md           # инструкция репозитория
 `-- src                 # папка с кодом
-    |-- env.html        # файл с секретами (аналог .env)
-    `-- Код.gs          # стартовый файл Google Script (аналог main.js)
+    |-- Code.gs          # стартовый файл Google Script (аналог main.js)
+    `-- env.html        # файл с секретами (аналог .env)
 
 1 directory, 6 files
 ```
@@ -111,3 +118,15 @@ tree --charset ascii -a -I ".git"
     https://www.postman.com/downloads.
     Date of access:
     14.02.2023.
+1. web app — Блог Дмитрия Жука о работе c Google sheets, docs, apps script
+    [Электронный ресурс] -
+    Режим доступа:
+    [https://dmitriizhuk.ru/2021/08/16/разбираемся-с-doget-в-скриптах-часть-1](https://dmitriizhuk.ru/2021/08/16/%D1%80%D0%B0%D0%B7%D0%B1%D0%B8%D1%80%D0%B0%D0%B5%D0%BC%D1%81%D1%8F-%D1%81-doget-%D0%B2-%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%B0%D1%85-%D1%87%D0%B0%D1%81%D1%82%D1%8C-1).
+    Дата доступа:
+    19.02.2023.
+1. How do I append a blank row in a Google Spreadsheet with Apps Script? - Stack Overflow
+    [Electronic resource] -
+    Mode of access:
+    https://stackoverflow.com/questions/34689556/how-do-i-append-a-blank-row-in-a-google-spreadsheet-with-apps-script.
+    Date of access:
+    19.02.2023.
